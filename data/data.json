@@ -1,0 +1,157 @@
+{
+  "students": [
+    {
+      "id": 9,
+      "fname": "Isim9",
+      "lname": "Soyisim9",
+      "num": "152120171109",
+      "dept": 1,
+      "pob": "Tokat",
+      "dob": "2001-07-16"
+    },
+    {
+      "id": 14,
+      "fname": "Isim14",
+      "lname": "Soyisim14",
+      "num": "152120171114",
+      "dept": 4,
+      "pob": "Çankırı",
+      "dob": "1999-02-28"
+    },
+    {
+      "id": 15,
+      "fname": "Isim15",
+      "lname": "Soyisim15",
+      "num": "152120171115",
+      "dept": 3,
+      "pob": "Aydın",
+      "dob": "1999-03-12"
+    },
+    {
+      "id": 16,
+      "fname": "Isim16",
+      "lname": "Soyisim16",
+      "num": "152120171116",
+      "dept": 4,
+      "pob": "Bilecik",
+      "dob": "2000-03-07"
+    },
+    {
+      "id": 17,
+      "fname": "Isim17",
+      "lname": "Soyisim17",
+      "num": "152120171117",
+      "dept": 1,
+      "pob": "Manisa",
+      "dob": "2000-03-31"
+    },
+    {
+      "id": 18,
+      "fname": "Isim18",
+      "lname": "Soyisim18",
+      "num": "152120171118",
+      "dept": 1,
+      "pob": "Bolu",
+      "dob": "2000-06-25"
+    },
+    {
+      "id": 19,
+      "fname": "Isim19",
+      "lname": "Soyisim19",
+      "num": "152120171119",
+      "dept": 2,
+      "pob": "Hatay",
+      "dob": "1997-03-04"
+    },
+    {
+      "id": 20,
+      "fname": "Isim20",
+      "lname": "Soyisim20",
+      "num": "152120171120",
+      "dept": 3,
+      "pob": "Afyon",
+      "dob": "2000-07-18"
+    },
+    {
+      "id": 21,
+      "fname": "Isim21",
+      "lname": "Soyisim21",
+      "num": "152120171121",
+      "dept": 1,
+      "pob": "Kars",
+      "dob": "2001-08-08"
+    },
+    {
+      "id": 22,
+      "fname": "Isim22",
+      "lname": "Soyisim22",
+      "num": "152120171122",
+      "dept": 4,
+      "pob": "Mardin",
+      "dob": "1997-01-31"
+    },
+    {
+      "id": 23,
+      "fname": "Isim23",
+      "lname": "Soyisim23",
+      "num": "152120171123",
+      "dept": 2,
+      "pob": "Van",
+      "dob": "2002-05-11"
+    },
+    {
+      "id": 26,
+      "fname": "Aras",
+      "lname": "Karanlık",
+      "num": "152120102021",
+      "dept": "4",
+      "pob": "İzmir",
+      "dob": "2022-12-09"
+    },
+    {
+      "id": 28,
+      "fname": "Umuta",
+      "lname": "Deniz",
+      "num": "151220192021",
+      "dept": "2",
+      "pob": "Kayseri",
+      "dob": "2001-10-03"
+    },
+    {
+      "id": 29,
+      "fname": "Cem",
+      "lname": "Kurt",
+      "num": "123123123123",
+      "dept": "2",
+      "pob": "Eskişehir",
+      "dob": "2022-12-22"
+    },
+    {
+      "id": 30,
+      "fname": "buKod",
+      "lname": "Calısırısa",
+      "num": "111111111111",
+      "dept": "2",
+      "pob": "benisik",
+      "dob": "2022-12-08"
+    },
+    {
+      "id": 31,
+      "fname": "Selamasd",
+      "lname": "Ben",
+      "num": "151223123451",
+      "dept": "2",
+      "pob": "Eskişehir",
+      "dob": "2023-01-11"
+    },
+    {
+      "id": 32,
+      "fname": "asd",
+      "lname": "Soyisimsd",
+      "num": "152120171103",
+      "dept": "2",
+      "pob": "Ankara",
+      "dob": "2023-01-13"
+    }
+  ]
+}

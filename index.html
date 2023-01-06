@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap CSS Framework reference-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--To use bootstrap icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <!--CSS file reference-->
+        <link rel="stylesheet" href="style.css">
+        <!--axios reference-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <title>Student Management System</title>
+    </head>
+
+    <body>
+
+        <div class="default-modal" data-toggle="modal" role="dialog">
+            <div class="default-modal-content"> 
+                <div class="default-modal-content-header modal-header">
+                    <div class="modal-icon-header">
+                        <i class="bi bi-info-circle-fill iconInfostyle"></i>
+                        <h1>
+                            Eklenecek Öğrenci Bilgileri
+                        </h1>
+                    </div>
+                    
+                    <span class="default-modal-close">&times;</span>
+                </div>
+                <form action="/action_page.php" class="row needs-validation modal-form mx-auto" novalidate id="formId">
+                    <div class="default-modal-content">
+                        <div class="modal-rows">
+                            <div class="modal-elements">
+                                <label for="validationCustom01" class="form-label">İsim</label>
+                                <input type="text" class="form-control" id="validationCustom01"
+                                pattern="[a-zA-ZçÇğĞıİşŞöÖüÜ]{3,50}" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">İsim en az 3 harf içermelidir.</div>
+                              </div>
+                              <div class="modal-elements">
+                                <label for="validationCustom02" class="form-label">Soyisim</label>
+                                <input type="text" class="form-control" id="validationCustom02"
+                                pattern="[a-zA-ZçÇğĞıİşŞöÖüÜ]{3,50}"  required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Soyad en az 3 harf içermelidir.</div>
+                              </div>
+                        </div>
+                        <div class="modal-rows">
+                            <div class="modal-elements">
+                                <label for="validationStudentNumber" class="form-label">Öğrenci Numarası</label>
+                                  <input type="text" class="form-control" id="validationStudentNumber" aria-describedby="inputGroupPrepend"
+                                  pattern="[1234567890]{12}"  required>
+                                  <div class="valid-feedback"></div>
+                                  <div class="invalid-feedback">Okul numarası 12 rakam içermelidir.</div>
+                              </div>
+                              <div class="modal-elements">
+                                <label for="validationCustom03" class="form-label">Bölüm</label>
+                                <select class="form-control" id="validationCustom03" aria-placeholder="Bölüm seçiniz" required>
+                                    <option value="" hidden>Bölüm seçiniz</option>
+                                    <option value="1">Bilgisayar Müh.</option>
+                                    <option value="2">Elektrik-Elektronik Müh.</option>
+                                    <option value="3">Endüstri Müh.</option>
+                                    <option value="4">İnşaat Müh.</option>
+                                  </select>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Lütfen bölüm seçiniz.</div>
+                              </div>      
+                        </div>
+                        <div class="modal-rows">
+                            <div class="modal-elements">
+                                <label for="validationCustom04" class="form-label">Doğum yeri</label>
+                                  <input type="text" class="form-control" id="validationCustom04"
+                                  pattern="[a-zA-ZçÇğĞıİşŞöÖüÜ]{3,50}"   required>
+                                  <div class="valid-feedback"></div>
+                                  <div class="invalid-feedback">Doğum yeri en az 3 harften oluşmalıdır.</div>
+                            </div>
+                              <div class="modal-elements">
+                                <label for="validationCustom05" class="form-label">Doğum tarihi</label>
+                                <input type="date" class="form-control" id="validationCustom05" required>
+                                <div class="valid-feedback"></div>
+                                <div class="invalid-feedback">Doğum tarihi giriniz.</div>
+                              </div>
+                        </div>
+                    </div>
+                  </form>
+
+                <div class="default-modal-content-footer modal-footer m-0">
+
+                    <button class="default-modal-footer-close-button default-modal-footer-buttons default-modal-close">Vazgeç</button>
+                    <button class="default-modal-footer-default-button default-modal-footer-buttons" type="submit" id="btnadd">Ekle</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div  class="delete-pop-up">
+            <div class="delete-pop-up-content modal-content">
+                
+                <div class="delete-pop-up-header modal-header p-3">
+                    <span class="close-pop-up ">&times;</span>
+                    <div class="delete-pop-up-header-inner">
+                        <i class="bi bi-exclamation-triangle-fill warningIcon"></i>
+                        <p class="fw-bold m-0 pl-2">Öğrenci Sil</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="delete-pop-up-information modal-body "></p>
+                </div>
+
+                <div class="delete-pop-up-buttons modal-footer">
+                    <button value="false">Vazgeç</button>
+                    <button class="pl-2" value="true">Sil</button>
+
+                </div>
+            </div>
+          
+          </div>
+
+
+        <div class="nav-bar m-2 pl-4 pr-4 pt-2">
+            <p>Merhaba, John Doe</p>
+            <div class="bottom-nav-bar">
+                <div>
+                    <img src="esogu-logo.png" alt="">
+                    <div class="page-info">
+                        <p class="m-0 font-weight-bold">Eskişehir Osmangazi Üniversitesi</p>
+                        <p class="m-0">Öğrenci Yönetim sistemi</p>
+                    </div>
+                    
+                </div>
+
+                <button>Çıkış Yap</button>
+            </div>
+        </div>
+
+            <div class="student-list-header p-4">
+                <h3>Öğrenci Listesi</h3>
+                <button class="btnAddpersonicon" id="add-button"  ><i class="bi bi-person-plus"></i></button>
+            </div>
+            
+        <table class="student-list">
+            <tbody>
+                <tr class="table-header">
+                        <th>İsim Soyisim</th>
+                        <th>Öğrenci Numarası</th>
+                        <th>Bölüm</th>
+                        <th>Yetkiler</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer pl-4 pr-4 pb-2 pt-2">
+            <p class="footer-title m-0"></p>
+            
+            <div class="page-buttons footer-buttons">
+            </div>
+            
+            <div class="limiter-buttons footer-buttons">
+                <button>5</button>
+                <button>8</button>
+                <button>10</button>
+            </div>
+            
+        </div>
+        <!--JavaScript file reference-->
+        
+        <script type="module" src="main.js"></script>
+        <script type="module" src="display.js"></script>
+        <script type="module" src="add.js"></script>
+        <script type="module" src="info.js"></script>
+        <script type="module" src="update.js"></script>
+        <script type="module" src="delete.js"></script>
+        
+    </body>
+</html>
