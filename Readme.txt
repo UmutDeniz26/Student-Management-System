@@ -1,1 +1,1 @@
-Run on VScode live server ext
+Run on the VScode live server ext
